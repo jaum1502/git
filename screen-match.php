@@ -1,11 +1,19 @@
 <?php
 
-echo "Bem vindo(a) ao screen match!!!\n" ;
+echo "Bem vindo(a) ao screen match!!!\n";
 
 $nomeFilme = "Top Gun - Maverick";
-$anoLancamento = 2022;
-$notaFilme  = 0.8 ;
-$incluidoNoPlano = true;
+$anoLancamento = $argv[1] ?? 2022;
+$notaFilme = 0.8;
+$somaDenotas = 9;
+$somaDenotas += 6;
+$somaDenotas += 8;
+$somaDenotas += 7.5;
+$somaDenotas += 5;
+$notafilme = $somaDenotas / 5;
+$planoPrime = true;
+$incluidoNoPlano = $planoPrime || $anoLancamento<2020;
 
-echo $nomeFilme;
-echo "O nome do filme é: ". $nomeFilme;
+
+echo "Nome do filme: " . $nomeFilme . "\n";
+echo "Data de lançamento: " . $anoLancamento . "\n";
