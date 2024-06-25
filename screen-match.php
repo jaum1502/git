@@ -2,15 +2,23 @@
 
 echo "Bem vindo(a) ao screen match!!!\n";
 
-$nomeFilme = "Top Gun - Maverick";
+$nomeFilme = "Top gun\n";
+
 $anoLancamento = 2022;
-$somaDenotas = 0;
-for($contador=1; $contador<$argc;$contador++){
-$somaDenotas+=$argv[$contador];
+
+$notas = [];
+
+for ($contador = 1; $contador < $argc; $contador++) {
+    $notas[] = (float) $argv[$contador];
 }
-$notaFilme = $somaDenotas/($argc-1); //esse -1 é para subtrair o primeiro indice(o nome do arquivo)
+
+
+$notaFilme = $somaDenotas / ($argc - 1); //esse -1 é para subtrair o primeiro indice(o nome do arquivo)
+
 $planoPrime = true;
+
 $incluidoNoPlano = $planoPrime || $anoLancamento < 2020;
+
 echo "\033[2J\033[;H";
 
 
@@ -26,10 +34,12 @@ if ($anoLancamento > 2022) {
 }
 
 $genero = match ($nomeFilme) {
-    "Top Gun - Maverick" => "ação",
+    "Top Gun" => "ação",
     "Thor: Ragnarok" => "herói",
     "Se beber não case" => "comédia",
     default => "genero desconhecido"
 };
 
-echo "O gênero é: $genero";
+echo "O gênero é: $genero\n";
+var_dump($notas);
+
