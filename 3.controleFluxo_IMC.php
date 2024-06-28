@@ -1,5 +1,5 @@
 <?php
-
+echo "\033[2J\033[;H";
 $peso = $argv[1];
 $altura = $argv[2];
 

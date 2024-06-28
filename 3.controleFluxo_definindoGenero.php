@@ -1,5 +1,5 @@
 <?php
-
+echo "\033[2J\033[;H";
 $filme = "diário de um banana";
 $filme = "o chamado";
 $filme = "como treinar o seu dragão";

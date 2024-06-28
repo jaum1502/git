@@ -1,5 +1,5 @@
 <?php
-
+echo "\033[2J\033[;H";
 $hora = $argv[1];
 if ($hora > 23 || $hora < 0) {
     echo "horário inválido";

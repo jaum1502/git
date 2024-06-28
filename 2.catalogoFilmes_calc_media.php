@@ -1,5 +1,5 @@
 <?php
-
+echo "\033[2J\033[;H";
 echo "Calculadora:\n";
 $nota = $argv[1];
 $nota += $argv[2];
