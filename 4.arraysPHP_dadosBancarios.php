@@ -20,30 +20,31 @@ do {
             echo "\033[2J\033[;H";
             echo "Digite o valor a ser sacado: R$";
             $valorSacado = (float) fgets(STDIN);
-            if($valorSacado<$dinheiroEmConta){
-                $dinheiroEmConta += $valorSacado;
-            echo "\033[2J\033[;H";
-            }else{
+            if ($valorSacado <= $dinheiroEmConta) {
+                $dinheiroEmConta -= $valorSacado;
+                echo "\033[2J\033[;H";
+            } else {
                 echo "\033[2J\033[;H";
                 echo "Saldo insuficiente\n\n";
-                echo 'Saldo Atual: R$'.$dinheiroEmConta . "\n\n\n";
+                echo 'Saldo Atual: R$' . $dinheiroEmConta . "\n\n\n";
             }
             break;
         case 3:
             echo "\033[2J\033[;H";
             echo "Digite o valor a ser depositado: R$";
-            $dinheiroEmConta += (float) fgets(STDIN);
+            $dinheiroEmConta += (float)fgets(STDIN);
             echo "\033[2J\033[;H";
             break;
         case 4:
             echo "\033[2J\033[;H";
             echo "------------------------------------\n";
-            echo "FIM DO PROGRAMA";
-             echo "-----------------------------------\n";
+            echo "FIM DO PROGRAMA\n";
+            echo "-----------------------------------\n";
             break;
         default:
-        echo "\033[2J\033[;H";
+            echo "\033[2J\033[;H";
             echo "VALOR INVÁLIDO\n";
 
     }
 } while ($menu != 4);
+
