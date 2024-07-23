@@ -20,6 +20,12 @@ $planoPrime = true;
 $incluidoNoPlano = incluidoNoPlano($planoPrime, $anoLancamento);
 
 
+$filme = [
+"nome"=>"Thor: Ragnarok",
+"ano"=>2021,
+"nota"=>"7.8",
+];
+
 
 exibeMensagemLancamento($anoLancamento);
 
@@ -30,6 +36,14 @@ $genero = match ($nomeFilme) {
     "Se beber não case" => "Comédia",
     default => "Gênero desconhecido"
 };
+
+$filmeComoStringJson = json_encode($filme);
+file_put_contents(__DIR__. '/filme.json', $filmeComoStringJson);
+
+
+
+
+
 
 echo "\033[2J\033[;H";
 echo "Nome do filme: " . $nomeFilme . "\n";

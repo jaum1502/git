@@ -1,5 +1,5 @@
 <?php
-
+echo "\033[2J\033[;H";
 function operacaoMatematica(int $numero1, int $numero2, string $operacao): float
 {
     return match($operacao) {
