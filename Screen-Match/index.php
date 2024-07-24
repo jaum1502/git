@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . "/funcoes.php";
+require __DIR__ . "/src/funcoes.php";
 
 echo "Bem vindo(a) ao screen match!!!\n";
 
@@ -20,12 +20,12 @@ $planoPrime = true;
 $incluidoNoPlano = incluidoNoPlano($planoPrime, $anoLancamento);
 
 
-$filme = [
-"nome"=>"Thor: Ragnarok",
-"ano"=>2021,
-"nota"=>"7.8",
-"Thor: Ragnarok" => "Super Herói",
-];
+$filme = criaFilme(
+nome: "Thor: Ragnarok", 
+anoLancamento: 2021, 
+nota: 7.8, 
+genero: "Super Herói");
+
 
 
 
@@ -39,7 +39,7 @@ $genero = match ($nomeFilme) {
 };
 
 $filmeComoStringJson = json_encode($filme);
-file_put_contents(__DIR__. '/filme.json', $filmeComoStringJson);
+file_put_contents(__DIR__ . '/filme.json', $filmeComoStringJson);
 
 
 

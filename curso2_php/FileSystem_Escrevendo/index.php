@@ -1,6 +1,6 @@
 <?php
 
-$arquivo = fopen('teste.txt','a');
+$arquivo = fopen('teste.txt', 'a');
 $frase = "teste";
 fwrite($arquivo, $frase);
 fclose($arquivo);
