@@ -24,7 +24,9 @@ $filme = [
 "nome"=>"Thor: Ragnarok",
 "ano"=>2021,
 "nota"=>"7.8",
+"Thor: Ragnarok" => "Super Herói",
 ];
+
 
 
 exibeMensagemLancamento($anoLancamento);
@@ -32,16 +34,12 @@ exibeMensagemLancamento($anoLancamento);
 
 $genero = match ($nomeFilme) {
     "Top Gun" => "Ação",
-    "Thor: Ragnarok" => "Herói",
     "Se beber não case" => "Comédia",
     default => "Gênero desconhecido"
 };
 
 $filmeComoStringJson = json_encode($filme);
 file_put_contents(__DIR__. '/filme.json', $filmeComoStringJson);
-
-
-
 
 
 
