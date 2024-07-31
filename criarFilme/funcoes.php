@@ -1,4 +1,4 @@
-<?PHP
+<?php
 
 function criaFilme()
 {
@@ -8,9 +8,6 @@ function criaFilme()
     $nota = fgets(STDIN);
     echo "Digite a categoria do filme: ";
     $categoria = fgets(STDIN);
-
-
-
 }
 
 
