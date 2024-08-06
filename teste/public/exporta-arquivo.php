@@ -8,4 +8,4 @@ $infos = [
 
 file_put_contents('sobre.json', json_encode($infos));
 
-header('location:/sucesso.php?nome='.$infos['nome'].$infos['idade']);
+header('location:/sucesso.php');

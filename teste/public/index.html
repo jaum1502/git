@@ -5,23 +5,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap');
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Centraliza verticalmente */
+            color: white;
+            height: 100vh;
+
+        }
+
+        body {
+            background: linear-gradient(33rad, red, blue);
+            animation: pulse 2s infinite alternate ;
+            overflow: hidden;
+        }
+
+        .formulario {
+            background-color: rgba(0, 0, 0, 0.322);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 40px rgb(0, 0, 0);
+            text-align: center;
+            /* Centraliza o texto dentro do .formulario */
+            font-family: "Kanit", sans-serif;
+            font-weight: 400;
+            font-style: italic;
+            font-size: 20px;
+
+
+        }
+
+        input {
+            width: 250px;
+            height: 25px;
+            margin-bottom: 10px;
+            /* Espaçamento entre os inputs */
+            padding: 5px;
+            border: 2px solid;
+            background: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            
+
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 300px;
+            height: 75px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-size: 30px;
+            font-family: "Kanit", sans-serif;
+            font-weight: 400;
+            font-style: italic;
+            margin: 10px;
+            
+        }
+
+        @keyframes pulse{
+           0%{
+            transform: scale(1.05);
+           }
+        }
+
+
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: rgb(128, 4, 4);
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 
 <body>
-    <form action="exporta-arquivo.php" method="post">
+
+    <form action="exporta-arquivo.php" method="post" class="formulario">
+        <hr>
         <h1>FORMULÁRIO:</h1>
         <hr>
-        <pre>
-    Nome: 
-    <input type="text" name="nome" id="nome"><br><br>
-    Idade:
-    <input type="number" name="idade" id="idade"><br><br>
-    Cidade:
-    <input type="text" name="cidade" id="cidade">
-    </pre>
-    <input type="submit" value="Enviar Formulário">
-    <input type="reset" value="Resetar">
+        Nome: <br>
+        <input type="text" name="nome" id="nome"><br>
+        Idade:<br>
+        <input type="number" name="idade" id="idade"><br>
+        Cidade:<br>
+        <input type="text" name="cidade" id="cidade">
+        <br><br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Resetar">
     </form>
+
 </body>
 
 </html>
